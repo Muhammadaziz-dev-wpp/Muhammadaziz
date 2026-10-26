@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101110">
+  <meta name="description" content="TREST 12 lokal namoyish admin paneli.">
+  <title>TREST 12 — Admin panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stayil.css">
+  <script src="trest-data.js" defer></script>
+  <script src="admin.js" defer></script>
+</head>
+<body class="admin-page">
+  <header class="admin-header" id="top">
+    <div class="container admin-header-inner">
+      <a class="brand" href="inde.html#bosh-sahifa" aria-label="TREST 12 bosh sahifasi">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>TREST <span>12</span></strong><small>ADMIN PANEL</small></span>
+      </a>
+      <a class="admin-back-link" href="inde.html#bosh-sahifa">Saytga qaytish <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="container admin-main">
+    <div class="admin-title">
+      <p class="eyebrow eyebrow-dark"><span></span> TREST 12 / BOSHQARUV</p>
+      <h1>Admin <span>paneli</span></h1>
+      <p>Loyihalarni yangilang va rozilik bilan qoldirilgan tashrifchilarni ko‘ring.</p>
+    </div>
+
+    <aside class="demo-warning" role="note">
+      <strong>Faqat lokal demo:</strong> loyihalar, rasmlar va tashrifchi ma’lumotlari faqat shu brauzerda saqlanadi. Boshqa qurilmalarga uzatilmaydi. Birinchi admin hisobini tashrifchilarga ko‘rsatishdan oldin yarating. Bu haqiqiy serverli yoki xavfsiz admin himoyasi emas; real saytga joylashdan oldin backend va server autentifikatsiyasi kerak.
+    </aside>
+
+    <section class="admin-auth-panel" data-admin-auth-panel aria-labelledby="auth-title">
+      <p class="eyebrow eyebrow-dark"><span></span> ADMIN KIRISHI</p>
+      <h2 id="auth-title">Kirish</h2>
+      <p class="auth-description" data-auth-description></p>
+      <form class="admin-auth-form" data-admin-auth-form>
+        <label for="admin-username">Admin login</label>
+        <input id="admin-username" name="username" type="text" autocomplete="username" minlength="3" maxlength="60" required>
+        <label for="admin-password">Parol</label>
+        <input id="admin-password" name="password" type="password" autocomplete="current-password" minlength="10" required>
+        <div class="auth-confirmation" data-auth-confirmation hidden>
+          <label for="admin-password-confirm">Parolni takrorlang</label>
+          <input id="admin-password-confirm" name="passwordConfirm" type="password" autocomplete="new-password" minlength="10">
+        </div>
+        <p class="admin-message" data-auth-message role="status" aria-live="polite"></p>
+        <button class="button button-primary" type="submit" data-auth-submit>Kirish <span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="password-warning">Bu demo login/parolini boshqa akkauntlarda ishlatmang. Parol brauzerda tuzli xesh holida saqlanadi, ammo mijoz tomondagi panel haqiqiy xavfsizlik bermaydi.</p>
+    </section>
+
+    <section class="admin-dashboard" data-admin-dashboard hidden>
+      <div class="dashboard-heading">
+        <div><p class="eyebrow eyebrow-dark"><span></span> BOSHQARUV</p><h2>Loyihalar va tashrifchilar</h2></div>
+        <button class="button button-outline-dark" type="button" data-admin-logout>Chiqish <span aria-hidden="true">↗</span></button>
+      </div>
+
+      <section class="admin-section" aria-labelledby="admin-project-title">
+        <div class="admin-section-heading">
+          <div><h3 id="admin-project-title">Loyihalarni boshqarish</h3><p>Har bir loyiha uchun nom, tavsif, manzil va 4 tagacha rasm.</p></div>
+          <button class="button button-primary" type="button" data-add-project>+ Loyiha qo‘shish</button>
+        </div>
+        <p class="admin-message" data-project-message role="status" aria-live="polite"></p>
+        <div class="admin-project-list" data-admin-project-list></div>
+      </section>
+
+      <section class="admin-section visitor-admin" aria-labelledby="admin-visitors-title">
+        <div class="admin-section-heading">
+          <div><h3 id="admin-visitors-title">Tashrifchilar ro‘yxati</h3><p>Faqat ism-yoshini ixtiyoriy yuborib, saqlashga rozilik bildirganlar.</p></div>
+          <button class="button button-outline-dark" type="button" data-clear-visitors>Ro‘yxatni tozalash</button>
+        </div>
+        <p class="admin-message" data-visitors-message role="status" aria-live="polite"></p>
+        <div class="visitor-table-wrap">
+          <table class="visitor-table">
+            <thead><tr><th>Ism</th><th>Yosh</th><th>Vaqt</th><th>Amal</th></tr></thead>
+            <tbody data-admin-visitors></tbody>
+          </table>
+          <p class="empty-visitors" data-empty-visitors>Hozircha tashrifchi ma’lumoti yo‘q.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="inde.html#bosh-sahifa" aria-label="TREST 12 bosh sahifasiga qaytish">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>TREST <span>12</span></strong><small>QURILISH KOMPANIYASI</small></span>
+      </a>
+      <p>Sifatli qurilish, mustahkam kelajak.</p>
+      <a class="back-top" href="#top">Yuqoriga <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="container footer-bottom"><span>© TREST 12</span><a href="inde.html#bosh-sahifa">Asosiy sahifa ↗</a></div>
+  </footer>
+</body>
+</html>

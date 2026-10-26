@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101110">
+  <meta name="description" content="TREST 12 qurgan joylar va qurilish loyihalari galereyasi.">
+  <title>TREST 12 — Bizning qurgan joylarimiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stayil.css">
+  <script src="trest-data.js" defer></script>
+  <script src="inde.js" defer></script>
+  <script src="projects.js" defer></script>
+</head>
+<body class="cards-page">
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="inde.html#bosh-sahifa" aria-label="TREST 12 bosh sahifa">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>TREST <span>12</span></strong><small>QURILISH KOMPANIYASI</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Asosiy navigatsiya">
+        <a href="inde.html#biz-haqimizda">Biz haqimizda</a>
+        <a href="inde.html#xizmatlar">Xizmatlar</a>
+        <a href="inde.html#ishlar">Ishlarimiz</a>
+        <a href="inde.html#afzalliklar">Afzalliklar</a>
+        <a href="index.html" aria-current="page">Bizning qurgan joylarimiz</a>
+        <a class="nav-contact" href="inde.html#boglanish">Bog‘lanish <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="cards-hero">
+      <div class="container cards-hero-content reveal">
+        <p class="eyebrow"><span></span> TREST 12 / LOYIHALAR</p>
+        <h1>BIZNING QURGAN <span>JOYLARIMIZ.</span></h1>
+        <p>Qurilish loyihalarimiz va obyektlar galereyasi bilan tanishing.</p>
+      </div>
+    </section>
+
+    <section class="card-directory section-pad" aria-labelledby="directory-title">
+      <div class="container">
+        <div class="section-top reveal">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark"><span></span> QURILISH LOYIHALARIMIZ</p>
+            <h2 id="directory-title">Bizning qurgan <span>joylarimiz</span></h2>
+          </div>
+          <a class="text-link directory-back" href="inde.html#bosh-sahifa">Asosiy sahifaga qaytish <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="projects-note reveal">Rasmlar hozircha namunaviy. Haqiqiy obyekt suratlari, nomlari va ma’lumotlari keyinroq kiritiladi.</p>
+        <div class="project-grid" data-project-list></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+    <div class="project-dialog-header">
+      <div><p class="eyebrow eyebrow-dark"><span></span> LOYIHA HAQIDA</p><h2 id="project-dialog-title">Loyiha nomi: ?</h2></div>
+      <button class="dialog-close" type="button" aria-label="Oynani yopish">×</button>
+    </div>
+    <p class="project-dialog-description">Ma’lumot: ?</p>
+    <p class="project-dialog-location">Manzil: ?</p>
+    <p class="project-dialog-note">Quyidagi rasmlar hozircha namunaviy. Haqiqiy obyekt rasmlari keyinroq kiritiladi.</p>
+    <div class="project-dialog-gallery" aria-label="Loyiha rasmlari"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="inde.html#bosh-sahifa" aria-label="TREST 12 bosh sahifaga qaytish">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>TREST <span>12</span></strong><small>QURILISH KOMPANIYASI</small></span>
+      </a>
+      <p>Sifatli qurilish, mustahkam kelajak.</p>
+      <a class="back-top" href="#top">Yuqoriga <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="container footer-bottom"><span>© TREST 12</span><a href="admin.html">Admin panel ↗</a><a href="inde.html#bosh-sahifa">Asosiy sahifa ↗</a></div>
+  </footer>
+</body>
+</html>
